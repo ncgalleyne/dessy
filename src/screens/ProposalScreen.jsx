@@ -100,7 +100,7 @@ export default function ProposalScreen({ onYes, onNo, noCount }) {
             <video
               src="/videos/IMG_1622.MOV"
               alt="First date"
-              className="rounded-xl w-full h-90 object-cover"
+              className="rounded-xl w-full h-80 object-cover"
               autoPlay
               muted
               loop
