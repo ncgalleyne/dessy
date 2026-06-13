@@ -37,13 +37,28 @@ export default function SuccessScreen({ onGoToMemories }) {
   }, []);
 
   return (
-    <div
-      className="min-h-screen relative flex flex-col items-center justify-center px-6 py-8 overflow-hidden"
-      style={{
-        backgroundColor: "#101415",
-        backgroundImage: "radial-gradient(circle at 50% 50%, rgba(120, 81, 255, 0.15) 0%, transparent 50%)",
-      }}
-    >
+    <>
+      <style>
+        {`
+          @keyframes throb {
+            0%, 100% {
+              transform: scale(1);
+              box-shadow: 0 0 20px rgba(208, 188, 255, 0.4);
+            }
+            50% {
+              transform: scale(1.05);
+              box-shadow: 0 0 30px rgba(208, 188, 255, 0.6);
+            }
+          }
+        `}
+      </style>
+      <div
+        className="min-h-screen relative flex flex-col items-center justify-center px-6 py-8 overflow-hidden"
+        style={{
+          backgroundColor: "#101415",
+          backgroundImage: "radial-gradient(circle at 50% 50%, rgba(120, 81, 255, 0.15) 0%, transparent 50%)",
+        }}
+      >
       {/* Status Badge */}
       <div className="mb-6 z-10">
         <div
@@ -104,6 +119,7 @@ export default function SuccessScreen({ onGoToMemories }) {
           backgroundColor: "#d0bcff",
           color: "#101415",
           boxShadow: "0 0 20px rgba(208, 188, 255, 0.4)",
+          animation: "throb 2s ease-in-out infinite",
         }}
       >
         <Play size={20} />
@@ -145,5 +161,6 @@ export default function SuccessScreen({ onGoToMemories }) {
         </div>
       </div>
     </div>
+    </>
   );
 }
