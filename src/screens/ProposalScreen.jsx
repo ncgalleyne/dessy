@@ -72,7 +72,6 @@ export default function ProposalScreen({ onYes, onNo, noCount }) {
 
   return (
     <div className="min-h-screen bg-surface text-text flex flex-col overflow-hidden relative">
-      {/* <FloatingStars /> */}
 
       {/* Floating Hearts Background */}
       <div className="fixed inset-0 pointer-events-none z-0">
@@ -101,7 +100,7 @@ export default function ProposalScreen({ onYes, onNo, noCount }) {
             <video
               src="/videos/IMG_1622.MOV"
               alt="First date"
-              className="rounded-xl w-full h-80 object-cover"
+              className="rounded-xl w-full h-90 object-cover"
               autoPlay
               muted
               loop
