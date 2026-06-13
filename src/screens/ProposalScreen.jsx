@@ -1,6 +1,19 @@
 import { useState, useEffect } from "react";
-import { Heart, MoreVertical, Sparkles, Home } from "lucide-react";
-import FloatingStars from "../components/FloatingStars";
+import { Heart, Sparkles } from "lucide-react";
+
+const noMessages = [
+  "No",
+  "Are you sure?",
+  "Think again!",
+  "Still no?",
+  "Pretty please?",
+  "Don't do this to me!",
+  "You're joking, right?",
+  "Just click yes already!",
+  "Wait... what?",
+  "Look at the big button!",
+  "Error: Heart malfunctioning"
+];
 
 export default function ProposalScreen({ onYes, onNo, noCount }) {
   const [position, setPosition] = useState({ top: 0, left: 0 });
@@ -133,7 +146,7 @@ export default function ProposalScreen({ onYes, onNo, noCount }) {
               }}
               className="z-10 px-8 py-3 rounded-full border-2 border-outline text-outline font-medium transition-all duration-200 active:scale-95 whitespace-nowrap"
             >
-              No
+              {noMessages[noCount % noMessages.length]}
             </button>
           </div>
         )}
